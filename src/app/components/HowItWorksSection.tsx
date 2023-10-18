@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 const HowItWorksSection: React.FC = () => {
     return (
@@ -41,3 +43,46 @@ const HowItWorksSection: React.FC = () => {
 };
 
 export default HowItWorksSection;
+
+
+export const HowItWorksDriver = () => {
+    return (
+        <div style={{ padding: '0px 48px' }}>
+            <h3 className="fw-bold">How it Works</h3>
+            <p>Start your journey to earning while helping others move!</p>
+            <div className="d-flex flex-column flex-md-row gap-3">
+                <div>
+                    <div className="mover-hero-panel">
+                        <h5 className="fw-bold">Apply and Verify Your Information</h5>
+                        <p>
+                            Fill out a quick application and share some necessary documents like your driver's license and insurance. We just want to make sure you're all set to help others move.
+                        </p>
+                    </div>
+                    <div className="mover-hero-panel">
+                        <h5 className="fw-bold">Set Your Availability</h5>
+                        <p>
+                            Once you're verified, you're good to start accepting rides! Every time you log in, let us know how many items you're up for moving and what help you can provide.
+                        </p>
+                    </div>
+                    <div className="mover-hero-panel">
+                        <h5 className="fw-bold">Get paid!</h5>
+                        <p>
+                            After completing a ride, the user will send you the payment via Venmo or PayPal. That's it! You're all set to make someone's move a breeze.
+                        </p>
+                    </div>
+                    <div>
+                        <Link href="/your-request-mover-url" className="mover-btn mover-btn-sm">
+                            SIGN UP
+                        </Link>
+                    </div>
+                </div>
+                <div>
+                    <Image src={"/images/Iphone2.png"} alt={"iphone mover image"}
+                        width={500} height={300} className="img-fluid" />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+
